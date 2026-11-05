@@ -1,152 +1,400 @@
 <!doctype html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sobu Portfolio</title>
+<title>Sohaib Muhammad</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Sohaib Muhammad (Sobu) — CS at Habib University, Karachi. LLM agents, systems, and silicon.">
+<meta name="description" content="Sohaib Muhammad (Sobu): CS student at Habib University, Karachi. Agents, data systems, and hardware.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Yuji+Boku&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Spectral:ital,wght@0,400;0,500;1,400&amp;display=swap">
+<script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');</script>
 <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-<canvas id="scene" aria-hidden="true"></canvas>
-<div class="grain" aria-hidden="true"></div>
-
-<div class="loader" aria-hidden="true">
-  <span class="loader-glyph">墨</span>
-  <span class="loader-count mono"><span id="count">00</span> / grinding ink</span>
-</div>
-
-<div class="cursor" aria-hidden="true"><span></span></div>
-
-<header class="nav">
-  <a href="#top" class="seal-link" aria-label="Back to top">
-    <span class="seal">ソブ</span>
-    <span class="mono nav-name">Sohaib Muhammad</span>
-  </a>
-  <nav aria-label="Sections">
-    <a href="#ronin"><i>壱</i>Ronin</a>
-    <a href="#work"><i>弐</i>Work</a>
-    <a href="#armory"><i>参</i>Armory</a>
-    <a href="#arsenal"><i>肆</i>Arsenal</a>
-    <a href="#contact" class="nav-cta"><i>伍</i>Contact</a>
-  </nav>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="seal seal--sm" href="#top" aria-label="Sohaib Muhammad, back to top">SM</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#path">Path</a>
+      <a href="#discipline">Discipline</a>
+      <a href="#trials">Trials</a>
+      <a href="#words" data-nav="words">Words</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main id="top">
+<main>
+<section class="hero" id="top">
+  <!-- An original Jaeger-class machine standing in the mist behind the red: tiny human, colossal machine. -->
+  <svg class="mech" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <filter id="mechWash" filterUnits="userSpaceOnUse" x="440" y="200" width="720" height="640">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="19" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="12" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feGaussianBlur in="d" stdDeviation="2"></feGaussianBlur>
+      </filter>
+      <linearGradient id="mechFadeGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FFFFFF"></stop>
+        <stop offset="0.58" stop-color="#FFFFFF"></stop>
+        <stop offset="1" stop-color="#000000"></stop>
+      </linearGradient>
+      <mask id="mechFade" maskUnits="userSpaceOnUse" x="440" y="200" width="720" height="620">
+        <rect x="440" y="200" width="720" height="620" fill="url(#mechFadeGrad)"></rect>
+      </mask>
+    </defs>
+    <g mask="url(#mechFade)">
+      <g filter="url(#mechWash)" fill="#262626">
+        <polygon points="756,262 776,262 778,316 758,316"></polygon>
+        <polygon points="964,262 944,262 942,316 962,316"></polygon>
+        <polygon points="690,318 800,300 812,330 806,410 700,420 676,370"></polygon>
+        <polygon points="1030,318 920,300 908,330 914,410 1020,420 1044,370"></polygon>
+        <polygon points="1026,416 974,416 968,520 1020,526"></polygon>
+        <polygon points="1034,520 962,520 956,640 1038,640"></polygon>
+        <polygon points="1036,638 958,638 964,694 1030,694"></polygon>
+        <polygon points="798,578 852,578 848,682 804,682"></polygon>
+        <polygon points="922,578 868,578 872,682 916,682"></polygon>
+        <polygon points="792,676 858,676 864,782 786,782"></polygon>
+        <polygon points="928,676 862,676 856,782 934,782"></polygon>
+        <polygon points="776,778 868,778 872,800 770,800"></polygon>
+        <polygon points="944,778 852,778 848,800 950,800"></polygon>
+        <polygon points="796,306 924,306 936,332 784,332"></polygon>
+        <polygon points="774,326 946,326 966,400 934,470 786,470 754,400"></polygon>
+        <polygon points="802,468 918,468 908,530 812,530"></polygon>
+        <polygon points="780,528 940,528 926,582 794,582"></polygon>
+        <polygon points="832,262 888,262 900,284 894,312 826,312 820,284"></polygon>
+        <polygon points="684,322 796,306 800,318 690,334" fill="#1A1A1A"></polygon>
+        <polygon points="1036,322 924,306 920,318 1030,334" fill="#1A1A1A"></polygon>
+        <path d="M812 490 H908 M816 510 H904 M790 350 L770 400 M930 350 L950 400" stroke="#1A1A1A" stroke-width="5" fill="none"></path>
+        <path d="M970 580 H1020" stroke="#1A1A1A" stroke-width="6" fill="none"></path>
+        <!-- its right arm, jointed at shoulder and elbow, so it can salute -->
+        <g class="salute-arm">
+          <polygon points="694,416 746,416 752,520 700,526"></polygon>
+          <g class="salute-fore">
+            <polygon points="686,520 758,520 764,640 682,640"></polygon>
+            <polygon points="684,638 762,638 756,694 690,694"></polygon>
+            <path d="M700 580 H750" stroke="#1A1A1A" stroke-width="6" fill="none"></path>
+          </g>
+        </g>
+      </g>
+      <text x="860" y="452" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-weight="600" font-size="22" letter-spacing="6" fill="#141414" opacity="0.55">SM-01</text>
+    </g>
+    <polygon points="834,282 886,282 882,290 838,290" fill="#5E080C"></polygon>
+    <rect x="826" y="356" width="68" height="18" fill="#5E080C"></rect>
+  </svg>
+  <!-- chest vent: a slow reactor pulse, on its own layer -->
+  <svg class="mech-core" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><filter id="coreBlur" x="-150%" y="-300%" width="400%" height="700%"><feGaussianBlur stdDeviation="9"></feGaussianBlur></filter></defs>
+    <rect x="814" y="350" width="92" height="30" fill="#E0514C" filter="url(#coreBlur)"></rect>
+    <rect x="826" y="356" width="68" height="18" fill="#C9302C"></rect>
+    <path d="M832 360 H888 M832 365 H888 M832 370 H888" stroke="#7E0E13" stroke-width="1.5"></path>
+  </svg>
+  <!-- visor glint, on its own tiny layer -->
+  <svg class="mech-glint" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><filter id="glintBlur" x="-200%" y="-400%" width="500%" height="900%"><feGaussianBlur stdDeviation="7"></feGaussianBlur></filter></defs>
+    <ellipse cx="860" cy="286" rx="40" ry="9" fill="#E0514C" filter="url(#glintBlur)"></ellipse>
+    <polygon points="834,282 886,282 882,290 838,290" fill="#FF6A5C"></polygon>
+  </svg>
+  <svg class="hero-art" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <filter id="heroInk" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="4" seed="7" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="46" xChannelSelector="R" yChannelSelector="G" result="d">
+          <animate class="smil" attributeName="scale" values="190;46" keyTimes="0;1" calcMode="spline" keySplines="0.2 0.7 0.2 1" dur="2.2s" begin="indefinite" fill="freeze"></animate>
+        </feDisplacementMap>
+        <feGaussianBlur in="d" stdDeviation="0.8"></feGaussianBlur>
+      </filter>
+      <filter id="heroDry" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="3" seed="2" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+      </filter>
+    </defs>
+    <g class="mass" filter="url(#heroInk)">
+      <path d="M1440 0 L1440 640 C1300 600 1180 520 1120 400 C1060 280 1000 220 880 180 C980 150 1080 110 1180 40 C1220 20 1260 0 1300 0 Z" fill="#B3141B" fill-opacity="0.92"></path>
+      <path d="M1380 0 C1300 120 1180 210 960 250 C1120 270 1300 210 1440 140 L1440 0 Z" fill="#7E0E13" fill-opacity="0.8"></path>
+      <path d="M1440 120 C1250 200 1050 300 820 330 C960 360 1150 340 1440 300 Z" fill="#B3141B" fill-opacity="0.5"></path>
+      <path d="M1440 470 C1320 540 1200 690 1080 860 L1440 860 Z" fill="#141414" fill-opacity="0.82"></path>
+      <path d="M1440 380 C1360 420 1290 480 1250 560 C1320 520 1390 500 1440 500 Z" fill="#3A3A3A" fill-opacity="0.6"></path>
+    </g>
+    <g class="whiskers" filter="url(#heroDry)" fill="none" stroke="#B3141B" stroke-linecap="round">
+      <path d="M880 330 C760 360 700 420 690 500" stroke-width="3"></path>
+      <path d="M900 350 C820 420 800 500 830 570" stroke-width="2"></path>
+      <path d="M860 300 C720 290 620 330 560 400" stroke-width="1.5"></path>
+    </g>
+    <g class="splatter" fill="#B3141B" filter="url(#heroDry)">
+      <circle class="dot" style="--i:0" cx="812" cy="300" r="6"></circle>
+      <circle class="dot" style="--i:1" cx="790" cy="342" r="3"></circle>
+      <circle class="dot" style="--i:2" cx="760" cy="318" r="2"></circle>
+      <circle class="dot" style="--i:3" cx="842" cy="372" r="4"></circle>
+      <circle class="dot" style="--i:4" cx="738" cy="360" r="2.5"></circle>
+      <circle class="dot" style="--i:5" cx="700" cy="300" r="1.8"></circle>
+    </g>
+    <path class="ground" d="M0 800 C300 788 600 806 960 794 L960 810 C600 822 300 806 0 818 Z" fill="#141414" fill-opacity="0.85" filter="url(#heroDry)"></path>
+    <g class="figure" fill="#141414" filter="url(#heroDry)">
+      <circle cx="212" cy="712" r="9"></circle>
+      <path d="M198 723 L226 723 L234 790 L190 790 Z"></path>
+      <path d="M226 735 L262 765 L259 769 L224 742 Z"></path>
+    </g>
+  </svg>
+  <!-- Currents streaming through the red. Own layer, so only this small area redraws while it moves.
+       Same noise settings as #heroInk, so its rough edges line up exactly with the red mass. -->
+  <svg class="hero-flow-layer" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <filter id="heroInkFlow" filterUnits="userSpaceOnUse" x="760" y="-40" width="720" height="720">
+        <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="4" seed="7" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="46" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feGaussianBlur in="d" stdDeviation="0.8"></feGaussianBlur>
+      </filter>
+      <!-- the currents stay inside the red... -->
+      <clipPath id="massRed" clipPathUnits="userSpaceOnUse">
+        <path d="M1440 0 L1440 640 C1300 600 1180 520 1120 400 C1060 280 1000 220 880 180 C980 150 1080 110 1180 40 C1220 20 1260 0 1300 0 Z"></path>
+      </clipPath>
+      <!-- ...and never touch the black and grey ink (everything minus those shapes, even-odd) -->
+      <clipPath id="notDark" clipPathUnits="userSpaceOnUse">
+        <path clip-rule="evenodd" d="M0 0 H1440 V860 H0 Z M1440 470 C1320 540 1200 690 1080 860 L1440 860 Z M1440 380 C1360 420 1290 480 1250 560 C1320 520 1390 500 1440 500 Z"></path>
+      </clipPath>
+      <linearGradient id="streakLight" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#E0514C" stop-opacity="0"></stop>
+        <stop offset="0.5" stop-color="#E0514C" stop-opacity="0.55"></stop>
+        <stop offset="1" stop-color="#E0514C" stop-opacity="0"></stop>
+      </linearGradient>
+      <linearGradient id="streakDark" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#5E080C" stop-opacity="0"></stop>
+        <stop offset="0.5" stop-color="#5E080C" stop-opacity="0.5"></stop>
+        <stop offset="1" stop-color="#5E080C" stop-opacity="0"></stop>
+      </linearGradient>
+      <!-- seamless tile of slanted currents; it slides one way forever, from the top-right toward the tendrils -->
+      <pattern id="redFlow" x="0" y="0" width="520" height="1400" patternUnits="userSpaceOnUse" patternTransform="rotate(-28)">
+        <rect x="30" y="0" width="130" height="1400" fill="url(#streakLight)"></rect>
+        <rect x="210" y="0" width="170" height="1400" fill="url(#streakDark)"></rect>
+        <rect x="410" y="0" width="56" height="1400" fill="url(#streakLight)" opacity="0.8"></rect>
+        <animateTransform class="hero-flow" attributeName="patternTransform" type="translate" from="0 0" to="-520 0" dur="7s" additive="sum" begin="indefinite" repeatCount="indefinite"></animateTransform>
+      </pattern>
+    </defs>
+    <g filter="url(#heroInkFlow)">
+      <g clip-path="url(#notDark)"><rect x="780" y="0" width="660" height="660" fill="url(#redFlow)" clip-path="url(#massRed)"></rect></g>
+    </g>
+  </svg>
+  <!-- low mist drifting left across the ground; two banks at different speeds for depth -->
+  <div class="fog fog--back" aria-hidden="true"></div>
+  <div class="fog fog--front" aria-hidden="true"></div>
+  <canvas class="ink-trail" aria-hidden="true"></canvas>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero wrap">
-    <div class="hero-meta mono">
-      <span>24.86° N / 67.00° E</span>
-      <span>Karachi, Pakistan</span>
+  <div class="hero-name">
+    <span class="hairline"></span>
+    <h1 class="vname">Sohaib Muhammad</h1>
+    <span class="hairline hairline--late"></span>
+  </div>
+
+  <div class="hero-copy">
+    <p class="kicker">Sobu —</p>
+    <p class="headline"><span class="line"><span>Built to hold</span></span><span class="line"><span>under load.</span></span></p>
+    <p class="meta">CS · Habib University · Karachi</p>
+    <p class="salute-note" id="saluteNote" aria-live="polite"></p>
+  </div>
+
+  <p class="photo-note">[ your photo, rendered in ink ]</p>
+</section>
+
+<section class="path" id="path" aria-labelledby="path-title">
+  <!-- circuit traces from the spine to each project; laid out by main.js -->
+  <svg class="traces" id="traces" aria-hidden="true"></svg>
+  <svg class="spine" id="spineSvg" viewBox="0 0 220 2000" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <filter id="spineInk" x="-30%" y="-2%" width="160%" height="104%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.03 0.006" numOctaves="4" seed="11" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="34" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+      </filter>
+      <clipPath id="spineClip" clipPathUnits="userSpaceOnUse">
+        <rect id="spineClipRect" x="-50" y="0" width="320" height="2000"></rect>
+      </clipPath>
+      <clipPath id="spineShape" clipPathUnits="userSpaceOnUse">
+        <path d="M96 0 C126 200 70 400 104 600 C136 800 78 1000 100 1200 C122 1400 74 1600 102 2000 L126 2000 C98 1600 146 1400 124 1200 C104 1000 160 800 130 600 C96 400 152 200 124 0 Z"></path>
+      </clipPath>
+      <linearGradient id="sheenGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#5A5A5A" stop-opacity="0"></stop>
+        <stop offset="0.5" stop-color="#5A5A5A" stop-opacity="1"></stop>
+        <stop offset="1" stop-color="#5A5A5A" stop-opacity="0"></stop>
+      </linearGradient>
+      <!-- wet-ink bands; the pattern tiles seamlessly and slides down forever -->
+      <pattern id="inkFlow" x="0" y="0" width="220" height="500" patternUnits="userSpaceOnUse">
+        <rect x="0" y="20" width="220" height="150" fill="url(#sheenGrad)" opacity="0.55"></rect>
+        <rect x="0" y="215" width="220" height="60" fill="url(#sheenGrad)" opacity="0.35"></rect>
+        <rect x="0" y="320" width="220" height="160" fill="url(#sheenGrad)" opacity="0.6"></rect>
+        <animateTransform class="alive-anim" attributeName="patternTransform" type="translate" from="0 0" to="0 500" dur="3.2s" begin="indefinite" repeatCount="indefinite"></animateTransform>
+      </pattern>
+      <linearGradient id="flowGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#B3141B" stop-opacity="0"></stop>
+        <stop offset="0.55" stop-color="#B3141B" stop-opacity="0.9"></stop>
+        <stop offset="0.7" stop-color="#E0514C" stop-opacity="0.9"></stop>
+        <stop offset="1" stop-color="#B3141B" stop-opacity="0"></stop>
+      </linearGradient>
+    </defs>
+    <g filter="url(#spineInk)">
+      <g clip-path="url(#spineClip)" fill="#141414">
+        <path d="M96 0 C126 200 70 400 104 600 C136 800 78 1000 100 1200 C122 1400 74 1600 102 2000 L126 2000 C98 1600 146 1400 124 1200 C104 1000 160 800 130 600 C96 400 152 200 124 0 Z"></path>
+        <path d="M104 600 C70 640 40 700 20 780 C60 720 90 680 116 650 Z" fill-opacity="0.8"></path>
+        <path d="M124 1200 C160 1240 190 1300 205 1380 C175 1320 150 1280 112 1250 Z" fill-opacity="0.8"></path>
+        <circle cx="60" cy="320" r="5"></circle><circle cx="170" cy="940" r="4"></circle><circle cx="40" cy="1520" r="6"></circle><circle cx="180" cy="1700" r="3"></circle>
+        <!-- alive: red pulses flowing down through the ink -->
+        <g class="flow" clip-path="url(#spineShape)">
+          <rect class="ink-flow" x="0" y="0" width="220" height="2000" fill="url(#inkFlow)"></rect>
+          <g class="red-flow">
+          <rect x="0" y="-380" width="220" height="380" fill="url(#flowGrad)">
+            <animate class="alive-anim" attributeName="y" values="-380;2000" dur="5.5s" begin="indefinite" repeatCount="indefinite"></animate>
+          </rect>
+          <rect x="0" y="-380" width="220" height="240" fill="url(#flowGrad)" opacity="0.6">
+            <animate class="alive-anim alive-late" attributeName="y" values="-380;2000" dur="5.5s" begin="indefinite" repeatCount="indefinite"></animate>
+          </rect>
+          </g>
+        </g>
+        <!-- faint circuitry etched inside the ink; generated by main.js along the spine's centre line -->
+        <g class="circuit" id="spineCircuit"></g>
+      </g>
+    </g>
+  </svg>
+
+  <div class="wrap path-inner">
+    <div class="path-head">
+      <h2 id="path-title" class="label">The Path</h2>
+      <p class="path-note">Every project is a stop on the line. New ones get added at the bottom.</p>
     </div>
+    <div class="stops" id="stops"></div>
+    <a class="rest-link" href="https://github.com/sohaibm05">The rest of the path <span aria-hidden="true">→</span></a>
+  </div>
+</section>
 
-    <h1 class="hero-title" aria-label="Sobu">
-      <span class="split">SOBU</span>
-    </h1>
-    <div class="hero-vertical brush" aria-hidden="true">ソブ</div>
-
-    <div class="hero-copy">
-      <p class="hero-lede">I build things that think, and the machines they run on.</p>
-      <p class="hero-sub">CS at Habib University. LLM agents for one of Pakistan's biggest retailers, a self-grading question bank for a hospital, a RISC-V CPU on an FPGA. Twenty-odd builds in, still sharpening the blade.</p>
-      <div class="hero-actions">
-        <a class="btn btn-red" href="#work">See the work</a>
-        <a class="btn btn-ghost" href="https://github.com/sohaibm05" target="_blank" rel="noopener">GitHub ↗</a>
-      </div>
-    </div>
-
-    <div class="hero-side mono" aria-hidden="true">
-      <span class="rule"></span>THE WAY OF THE BUILDER<span class="rule"></span>
-    </div>
-
-    <a class="scroll-cue mono" href="#ronin"><span class="cue-line"></span>Descend</a>
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section id="ronin" class="ronin wrap">
-    <div class="chapter mono"><b>壱</b> The Ronin</div>
-    <div class="ronin-grid">
-      <blockquote class="ronin-quote">
-        I don't collect frameworks. I pick the problem first, then whatever cuts it cleanest.
-      </blockquote>
-      <div class="ronin-body">
-        <p>I'm Sohaib. Everyone calls me Sobu. I study Computer Science at Habib University in Karachi.</p>
-        <p>My work runs the full height of the stack. At the top, LLM agents making merchandising calls on real retail data. In the middle, a C++ records system built on red-black trees. At the bottom, a single-cycle RISC-V CPU I wrote in Verilog and put on an FPGA.</p>
-        <p>I like problems with real people on the other end. If it ships and someone uses it, it counts. If it only lives in a slide deck, it doesn't.</p>
-        <dl class="ledger mono">
-          <div><dt>Builds</dt><dd>20+</dd></div>
-          <div><dt>Range</dt><dd>Verilog → LLMs</dd></div>
-          <div><dt>Base</dt><dd>Karachi, PK</dd></div>
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FEATURED ================= -->
-  <section id="work" class="work ink-band">
-    <div class="wrap">
-      <div class="chapter mono"><b>弐</b> Major Arcs</div>
-      <h2 class="section-title">Two builds I'd stake my name on.</h2>
-      <div id="featured" class="featured"></div>
-    </div>
-  </section>
-
-  <!-- ================= ARMORY ================= -->
-  <section id="armory" class="armory wrap">
-    <div class="chapter mono"><b>参</b> The Armory</div>
-    <div class="armory-head">
-      <h2 class="section-title">Everything else on the rack.</h2>
-      <div class="filters mono" role="group" aria-label="Filter projects">
-        <button type="button" data-filter="All" class="on" id="f-all">All</button>
-        <button type="button" data-filter="AI" id="f-ai">AI</button>
-        <button type="button" data-filter="Systems" id="f-sys">Systems</button>
-        <button type="button" data-filter="Hardware" id="f-hw">Hardware</button>
-      </div>
-    </div>
-    <div id="projects" class="projects"></div>
-  </section>
-
-  <!-- ================= SKILLS ================= -->
-  <section id="arsenal" class="arsenal ink-band">
-    <div class="wrap">
-      <div class="chapter mono"><b>肆</b> Arsenal</div>
-      <h2 class="section-title">Tools I've actually used in anger.</h2>
-      <div id="skills" class="skills"></div>
-    </div>
-  </section>
-
-  <!-- ================= TESTIMONIALS ================= -->
-  <section id="word" class="word wrap">
-    <div class="chapter mono"><b>言</b> Word from others</div>
-    <div id="testimonials" class="testimonials"></div>
-  </section>
-
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="contact ink-band">
-    <div class="wrap">
-      <div class="chapter mono"><b>伍</b> Send a crow</div>
-      <h2 class="contact-title">Got a hard problem?<br><span>Let's cut it.</span></h2>
-      <div class="contact-row">
-        <div class="email-box">
-          <span class="mono label">Email</span>
-          <span id="email" class="email"></span>
-          <button type="button" id="copy" class="btn btn-red btn-sm">Copy</button>
+<section class="discipline" id="discipline" aria-labelledby="discipline-title">
+  <svg class="tear tear--top" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true">
+    <defs><filter id="tearTop"><feTurbulence type="fractalNoise" baseFrequency="0.04 0.2" numOctaves="3" seed="5" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="22" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs>
+    <path d="M0 30 L120 22 L260 34 L380 18 L520 28 L700 16 L860 30 L1020 20 L1180 32 L1320 18 L1440 26 L1440 60 L0 60 Z" fill="#141414" filter="url(#tearTop)"></path>
+  </svg>
+  <div class="band">
+    <div class="wrap band-inner">
+      <h2 id="discipline-title" class="vlabel">Discipline</h2>
+      <div class="band-copy">
+        <p class="statement" id="statement">Training runs in versioned programs. So does everything else.</p>
+        <div class="facts">
+          <p>Gym, five days a week. Logged, tracked, iterated.</p>
+          <p>StarCraft 2 taught me build orders. Valorant now.</p>
+          <p>Red Rising on the shelf. Ender's Game and Pacific Rim on repeat.</p>
         </div>
-        <div class="contact-links mono" id="links"></div>
       </div>
-      <footer class="foot mono">
-        <span>© 2026 Sohaib Muhammad</span>
-        <span>Made in Karachi</span>
-        <span class="seal seal-sm">ソブ</span>
-      </footer>
     </div>
-  </section>
+  </div>
+  <svg class="tear tear--bottom" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true">
+    <defs><filter id="tearBot"><feTurbulence type="fractalNoise" baseFrequency="0.05 0.2" numOctaves="3" seed="9" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="22" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs>
+    <path d="M0 -10 L1440 -10 L1440 24 L1300 34 L1160 20 L1000 30 L840 18 L680 32 L520 22 L360 34 L200 20 L80 30 L0 22 Z" fill="#141414" filter="url(#tearBot)"></path>
+  </svg>
+</section>
+
+<section class="trials" id="trials" aria-labelledby="trials-title">
+  <div class="wrap trials-inner">
+    <div class="path-head">
+      <h2 id="trials-title" class="label">Trials</h2>
+      <p class="path-note">Two quick ones. Your best scores stay in this browser.</p>
+    </div>
+
+    <!-- Trial I: Iaido -->
+    <article class="trial" aria-labelledby="duel-title">
+      <div class="trial-copy">
+        <p class="trial-kicker">Trial I</p>
+        <h3 class="trial-title" id="duel-title">Iaido</h3>
+        <p class="trial-text" id="duelHelp">Two swordsmen, one breath. Wait for the red, then strike: click, tap, or press Space. Move early and you lose.</p>
+        <dl class="stats">
+          <div><dt>Last</dt><dd id="duelLast">—</dd></div>
+          <div><dt>Best</dt><dd id="duelBest">—</dd></div>
+          <div><dt>Rank</dt><dd id="duelRank">—</dd></div>
+        </dl>
+        <p class="trial-note" id="duelSobu" hidden></p>
+      </div>
+      <button class="duel-stage" id="duelStage" type="button" data-state="idle" aria-describedby="duelHelp">
+        <svg class="duel-art" viewBox="0 0 800 340" aria-hidden="true">
+          <defs>
+            <filter id="duelInk" x="-10%" y="-10%" width="120%" height="120%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="4" result="n"></feTurbulence>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+            </filter>
+          </defs>
+          <path d="M0 292 C200 284 420 298 800 288 L800 300 C420 310 200 296 0 304 Z" fill="#141414" filter="url(#duelInk)"></path>
+          <g class="duelist duelist--you" fill="#141414" filter="url(#duelInk)">
+            <circle cx="230" cy="186" r="13"></circle>
+            <path d="M214 200 L248 200 L262 290 L200 290 Z"></path>
+            <path d="M246 216 L300 196 L302 202 L250 224 Z"></path>
+          </g>
+          <g class="duelist duelist--foe" fill="#141414" filter="url(#duelInk)">
+            <circle cx="570" cy="186" r="13"></circle>
+            <path d="M552 200 L586 200 L600 290 L538 290 Z"></path>
+            <path d="M554 216 L500 196 L498 202 L550 224 Z"></path>
+          </g>
+          <path class="slash" pathLength="1" d="M150 250 C330 205 480 150 690 92"></path>
+          <path class="slash slash--red" pathLength="1" d="M156 254 C336 209 486 154 696 96"></path>
+        </svg>
+        <span class="duel-flash" aria-hidden="true"></span>
+        <span class="duel-msg" id="duelMsg" aria-live="polite">Click, tap or press Space to begin</span>
+      </button>
+    </article>
+
+    <!-- Trial II: Build order -->
+    <article class="trial trial--build" aria-labelledby="build-title">
+      <div class="trial-copy">
+        <p class="trial-kicker">Trial II</p>
+        <h3 class="trial-title" id="build-title">Build Order</h3>
+        <p class="trial-text">SM-01 is built from my projects. Put each one where it belongs: pick a project, then its part, or drag it there. 45 seconds. A wrong fit costs 3.</p>
+        <dl class="stats">
+          <div><dt>Time</dt><dd id="buildTimer">0:45.0</dd></div>
+          <div><dt>Best</dt><dd id="buildBest">—</dd></div>
+        </dl>
+        <p class="trial-note" id="buildMsg" aria-live="polite">The clock starts on your first move.</p>
+        <button class="trial-btn" id="buildReset" type="button">Reset</button>
+      </div>
+      <div class="build">
+        <div class="frame" id="buildFrame">
+          <svg class="frame-art" viewBox="0 0 400 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <path d="M180 22 H220 L228 40 L222 60 H178 L172 40 Z"></path>
+            <path d="M150 70 H250 L262 140 L244 200 H156 L138 140 Z"></path>
+            <path d="M138 74 L70 86 L58 132 L74 150 L134 144 Z M262 74 L330 86 L342 132 L326 150 L266 144 Z"></path>
+            <path d="M74 150 L66 270 L102 270 L110 150 M326 150 L334 270 L298 270 L290 150"></path>
+            <path d="M160 200 H240 L234 236 H166 Z"></path>
+            <path d="M166 236 L158 400 H194 L198 236 M234 236 L242 400 H206 L202 236"></path>
+          </svg>
+          <button class="slot" type="button" data-slot="cockpit" style="grid-area: cockpit"><span class="slot-role">Cockpit</span><span class="slot-hint">Makes the decisions</span></button>
+          <button class="slot" type="button" data-slot="arms" style="grid-area: arms"><span class="slot-role">Arms</span><span class="slot-hint">Reaches real users</span></button>
+          <button class="slot" type="button" data-slot="core" style="grid-area: core"><span class="slot-role">Core</span><span class="slot-hint">Holds everything together</span></button>
+          <button class="slot" type="button" data-slot="sensors" style="grid-area: sensors"><span class="slot-role">Sensors</span><span class="slot-hint">Sees in real time</span></button>
+          <button class="slot" type="button" data-slot="frame" style="grid-area: frame"><span class="slot-role">Frame</span><span class="slot-hint">The silicon underneath</span></button>
+        </div>
+        <div class="tray" id="buildTray" aria-label="Projects to place"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="words" id="words" aria-labelledby="words-title">
+  <div class="wrap words-inner">
+    <h2 id="words-title" class="label">Words</h2>
+    <div class="scrolls" id="scrolls"></div>
+  </div>
+</section>
+
+<footer class="contact" id="contact">
+  <div class="wrap contact-inner">
+    <span class="seal seal--lg stamp" aria-hidden="true">SM</span>
+    <h2 class="send">Send word.</h2>
+    <ul class="links">
+      <li><a href="https://github.com/sohaibm05">GitHub</a></li>
+      <li><a class="email" href="mailto:thelearnee@gmail.com">thelearnee@gmail.com</a></li>
+    </ul>
+  </div>
+</footer>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
-<script src="js/data.js"></script>
-<script src="js/scene.js"></script>
-<script src="js/main.js"></script>
+<script src="data/projects.js"></script>
+<script src="data/testimonials.js"></script>
+<script src="main.js"></script>
+<script src="games.js"></script>
+</body>
 </html>
