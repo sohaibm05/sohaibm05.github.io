@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sobu Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sohaib Muhammad (Sobu) — CS at Habib University, Karachi. LLM agents, systems, and silicon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Yuji+Boku&display=swap">
+<link rel="stylesheet" href="styles.css">
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="loader" aria-hidden="true">
+  <span class="loader-glyph">墨</span>
+  <span class="loader-count mono"><span id="count">00</span> / grinding ink</span>
+</div>
+
+<div class="cursor" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <a href="#top" class="seal-link" aria-label="Back to top">
+    <span class="seal">ソブ</span>
+    <span class="mono nav-name">Sohaib Muhammad</span>
+  </a>
+  <nav aria-label="Sections">
+    <a href="#ronin"><i>壱</i>Ronin</a>
+    <a href="#work"><i>弐</i>Work</a>
+    <a href="#armory"><i>参</i>Armory</a>
+    <a href="#arsenal"><i>肆</i>Arsenal</a>
+    <a href="#contact" class="nav-cta"><i>伍</i>Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero wrap">
+    <div class="hero-meta mono">
+      <span>24.86° N / 67.00° E</span>
+      <span>Karachi, Pakistan</span>
+    </div>
+
+    <h1 class="hero-title" aria-label="Sobu">
+      <span class="split">SOBU</span>
+    </h1>
+    <div class="hero-vertical brush" aria-hidden="true">ソブ</div>
+
+    <div class="hero-copy">
+      <p class="hero-lede">I build things that think, and the machines they run on.</p>
+      <p class="hero-sub">CS at Habib University. LLM agents for one of Pakistan's biggest retailers, a self-grading question bank for a hospital, a RISC-V CPU on an FPGA. Twenty-odd builds in, still sharpening the blade.</p>
+      <div class="hero-actions">
+        <a class="btn btn-red" href="#work">See the work</a>
+        <a class="btn btn-ghost" href="https://github.com/sohaibm05" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-side mono" aria-hidden="true">
+      <span class="rule"></span>THE WAY OF THE BUILDER<span class="rule"></span>
+    </div>
+
+    <a class="scroll-cue mono" href="#ronin"><span class="cue-line"></span>Descend</a>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="ronin" class="ronin wrap">
+    <div class="chapter mono"><b>壱</b> The Ronin</div>
+    <div class="ronin-grid">
+      <blockquote class="ronin-quote">
+        I don't collect frameworks. I pick the problem first, then whatever cuts it cleanest.
+      </blockquote>
+      <div class="ronin-body">
+        <p>I'm Sohaib. Everyone calls me Sobu. I study Computer Science at Habib University in Karachi.</p>
+        <p>My work runs the full height of the stack. At the top, LLM agents making merchandising calls on real retail data. In the middle, a C++ records system built on red-black trees. At the bottom, a single-cycle RISC-V CPU I wrote in Verilog and put on an FPGA.</p>
+        <p>I like problems with real people on the other end. If it ships and someone uses it, it counts. If it only lives in a slide deck, it doesn't.</p>
+        <dl class="ledger mono">
+          <div><dt>Builds</dt><dd>20+</dd></div>
+          <div><dt>Range</dt><dd>Verilog → LLMs</dd></div>
+          <div><dt>Base</dt><dd>Karachi, PK</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED ================= -->
+  <section id="work" class="work ink-band">
+    <div class="wrap">
+      <div class="chapter mono"><b>弐</b> Major Arcs</div>
+      <h2 class="section-title">Two builds I'd stake my name on.</h2>
+      <div id="featured" class="featured"></div>
+    </div>
+  </section>
+
+  <!-- ================= ARMORY ================= -->
+  <section id="armory" class="armory wrap">
+    <div class="chapter mono"><b>参</b> The Armory</div>
+    <div class="armory-head">
+      <h2 class="section-title">Everything else on the rack.</h2>
+      <div class="filters mono" role="group" aria-label="Filter projects">
+        <button type="button" data-filter="All" class="on" id="f-all">All</button>
+        <button type="button" data-filter="AI" id="f-ai">AI</button>
+        <button type="button" data-filter="Systems" id="f-sys">Systems</button>
+        <button type="button" data-filter="Hardware" id="f-hw">Hardware</button>
+      </div>
+    </div>
+    <div id="projects" class="projects"></div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="arsenal" class="arsenal ink-band">
+    <div class="wrap">
+      <div class="chapter mono"><b>肆</b> Arsenal</div>
+      <h2 class="section-title">Tools I've actually used in anger.</h2>
+      <div id="skills" class="skills"></div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section id="word" class="word wrap">
+    <div class="chapter mono"><b>言</b> Word from others</div>
+    <div id="testimonials" class="testimonials"></div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact ink-band">
+    <div class="wrap">
+      <div class="chapter mono"><b>伍</b> Send a crow</div>
+      <h2 class="contact-title">Got a hard problem?<br><span>Let's cut it.</span></h2>
+      <div class="contact-row">
+        <div class="email-box">
+          <span class="mono label">Email</span>
+          <span id="email" class="email"></span>
+          <button type="button" id="copy" class="btn btn-red btn-sm">Copy</button>
+        </div>
+        <div class="contact-links mono" id="links"></div>
+      </div>
+      <footer class="foot mono">
+        <span>© 2026 Sohaib Muhammad</span>
+        <span>Made in Karachi</span>
+        <span class="seal seal-sm">ソブ</span>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/main.js"></script>
+</html>
